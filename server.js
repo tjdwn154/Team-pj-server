@@ -9,13 +9,13 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(express.json());
 app.use(cookieParser()); // cookie-parser 미들웨어 설정
-app.use(
-  session({
-    secret: process.env.SESSION_SECRET_KEY,
-    resave: false,
-    saveUninitialized: true,
-  })
-);
+// app.use(
+//   session({
+//     secret: process.env.SESSION_SECRET_KEY,
+//     resave: false,
+//     saveUninitialized: true,
+//   })
+// );
 
 // KOPIS API(박스오피스 정보) 요청 함수
 const performanceListRouter = require("./api/performanceList");
